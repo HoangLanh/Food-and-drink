@@ -1,16 +1,14 @@
 class Admin::CategoriesController < ApplicationController
   load_and_authorize_resource
-
+  before_action :select_parent
   def index
-    @categories = @categories.children_category.order("parent_id")
+    @categories = @categories.children.order("parent_id")
   end
 
   def new
-    @category = Category.new
   end
 
   def create
-    @category = Category.new category_params
     if @category.save
       flash[:success] = t "controllers.flash.common.create_success",
         objects: t("activerecord.model.category")
@@ -47,5 +45,9 @@ class Admin::CategoriesController < ApplicationController
   private
   def category_params
     params.require(:category).permit :title, :parent_id
+  end
+
+  def select_parent
+    @parent =Category.parent_category.collect {|category| [category.title, category.id]}
   end
 end
