@@ -2,6 +2,9 @@
   <div class="container">
     <nav>
       <ul class="nav navbar-nav navbar-right">
+        <li>
+          <% link_to t("_Home"), products_path %>
+        </li>
         <li><%= link_to t("_home"), root_path %></li>
         <% if user_signed_in? %>
           <% if can? :manage, :all %>
@@ -9,10 +12,8 @@
               <%= link_to t("layout.header.categories"),
                 admin_categories_path %>
             </li>
-            <li>
-              <%= link_to t("layout.header.products"),
-                admin_products_path %>
-            </li>           
+            <li><%= link_to t("layout.header.products"),
+              admin_products_path %></li>
           <% end %> 
           <li>
             <%= link_to t("layout.header.logout"), destroy_user_session_path,

@@ -12,7 +12,7 @@
   </head>
   <body>
     <%= render "layouts/header" %> 
-    <div class="container">
+    <div class="container container-pading">
       <div id="messagebox">
         <% flash.each do |message_type, message| %>
           <%= content_tag :div, message,

@@ -8,6 +8,7 @@ capybara-*.html
 /public/system
 /coverage/
 /spec/tmp
+/public/*
 /test
 **.orig
 rerun.txt
@@ -41,3 +42,8 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+config/settings/
