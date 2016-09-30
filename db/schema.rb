@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20160923172106) do
     t.string   "image"
     t.float    "price"
     t.string   "category_id"
-    t.float    "rate_core"
+    t.float    "rate_score"
     t.string   "quantity"
     t.string   "integer"
     t.datetime "created_at",  null: false
