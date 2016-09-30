@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root "static_pages#home"
 
   namespace :admin do
+    root "products#index"
     resources :categories, except: [:show]
+    resources :products, except: [:show]
   end
 end

@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  enum role: [:guest, :member, :admin]
+  enum role: [:member, :admin]
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :comments, dependent: :destroy
