@@ -1,0 +1,14 @@
+<table class="table table-hover">
+  <thead>
+    <tr class="info">
+      <th><%= t "user.id" %></th>
+      <th><%= t "user.name" %></th>
+      <th><%= t "user.email" %></th>
+      <th><%= t "user.avatar" %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render partial: "user", colections: @users %>
+  </tbody>
+</table>

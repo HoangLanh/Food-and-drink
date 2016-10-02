@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="row">
+    <% if @user.avatar.present? %>
+      <%= link_to image_tag(@user.avatar.url, size: Settings.size), user_path %>
+    <% else %>
+      <%= link_to image_tag(Settings.url, size: Settings.size), user_path %>
+    <% end %>
+    <h3><%= t "user_name"%><%= @user.name %></h3>
+    <p><%= t "user_email" %> <%= @user.email %></p>
+  </div>
+  <%= link_to t("edit_profile"), edit_user_path %>
+</div>
