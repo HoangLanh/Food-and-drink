@@ -4,4 +4,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :comments, dependent: :destroy
   has_many :orders, dependent: :destroy
+
+  mount_uploader :avatar, AvatarUploader
+  
+  ATTRIBUTE_PARAMS = [:name, :email, :password, :password_confirmation,
+    :avatar]
 end

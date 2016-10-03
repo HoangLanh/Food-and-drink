@@ -1,7 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 body {
-  padding-top: 60px;
+  padding-top: 20px;
 }
 
 .center {
@@ -32,7 +32,7 @@ h1 {
   background-color: black;
   color: white;
   text-align: right;
-  padding: 20px;
+  padding: 10px;
 }
 .col-4 {
   display: inline-block;
@@ -73,4 +73,27 @@ ul.gallery {
 
 .item:hover {
   outline: 1px solid red;
+}
+
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
 }

@@ -1,3 +1,8 @@
 product:
   show:
     size: "350x400"
+size: "200x250"
+url: "/assets/avatar.jpg"
+admin:
+  size: "70x70"
+  url: "assets/avatar.jpg"

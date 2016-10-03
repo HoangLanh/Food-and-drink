@@ -20,6 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  user_name: "User name: "
+  user_email: "Email: "
   hello: "Hello world"
   login: "Login"
   _signup: "Sign up"
@@ -77,3 +79,6 @@ en:
           newcategorybutton: "Create new category"
         form:
           classify: "Classify"
+  deleteconfirm: "Are you sure?"
+  Update: "Update"
+  Cancel: "Cancel"
